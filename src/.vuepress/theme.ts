@@ -102,7 +102,7 @@ export default hopeTheme({
             displayFooter: true,
 
             blog: {
-                description: '一个将要变成羽毛球高手的全栈开发者',
+                description: '一个将要变成高级前端开发工程师的女程序员',
                 intro: '/intro.html'
             },
 

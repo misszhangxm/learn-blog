@@ -1,5 +1,5 @@
 ---
-title: vue
+title: vuex
 date: 2018-11-28 12:53:31
 tag: [vue]
 category: Vue

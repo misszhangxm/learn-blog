@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="zh-CN" data-theme="light">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta name="generator" content="VuePress 2.0.0-beta.60" />
+    <meta name="theme" content="VuePress Theme Hope" />
+    <meta property="og:url" content="http://cc.ceel.vip/posts/zx/%E4%BA%8C%E5%8F%89%E6%A0%91-1.html"><meta property="og:site_name" content="Miss.Ceel"><meta property="og:title" content="二叉树"><meta property="og:type" content="article"><meta property="og:locale" content="zh-CN"><meta property="og:updated_time" content="2023-09-04T15:15:07.000Z"><meta property="article:tag" content="数据结构"><meta property="article:published_time" content="2017-01-25T17:33:01.000Z"><meta property="article:modified_time" content="2023-09-04T15:15:07.000Z"><script type="application/ld+json">{"@context":"https://schema.org","@type":"Article","headline":"二叉树","image":[""],"datePublished":"2017-01-25T17:33:01.000Z","dateModified":"2023-09-04T15:15:07.000Z","author":[]}</script><title>二叉树 | Miss.Ceel</title><meta name="description" content="">
+    <style>
+      :root {
+        --bg-color: #fff;
+      }
+
+      html[data-theme="dark"] {
+        --bg-color: #1d1e1f;
+      }
+
+      html,
+      body {
+        background: var(--bg-color);
+      }
+    </style>
+    <script>
+      const userMode = localStorage.getItem("vuepress-theme-hope-scheme");
+      const systemDarkMode =
+        window.matchMedia &&
+        window.matchMedia("(prefers-color-scheme: dark)").matches;
+
+      if (userMode === "dark" || (userMode !== "light" && systemDarkMode)) {
+        document.querySelector("html").setAttribute("data-theme", "dark");
+      }
+    </script>
+    <link rel="preload" href="/assets/style-3bbc98fb.css" as="style"><link rel="stylesheet" href="/assets/style-3bbc98fb.css">
+    <link rel="modulepreload" href="/assets/app-2e9daeed.js"><link rel="modulepreload" href="/assets/framework-fd1dac66.js"><link rel="modulepreload" href="/assets/二叉树-1.html-2fdbc107.js"><link rel="modulepreload" href="/assets/二叉树-1.html-d428fb98.js">
+  </head>
+  <body>
+    <div id="app"><!--[--><!--[--><!--[--><span tabindex="-1"></span><a href="#main-content" class="skip-link sr-only">跳至主要內容</a><!--]--><div class="theme-container has-toc"><!--[--><header class="navbar" id="navbar"><div class="navbar-left"><button class="toggle-sidebar-button" title="Toggle Sidebar"><span class="icon"></span></button><!--[--><!----><!--]--><a href="/" class="brand"><img class="logo" src="/m.png" alt="Miss.Ceel"><!----><span class="site-name hide-in-pad">Miss.Ceel</span></a><!--[--><!----><!--]--></div><div class="navbar-center"><!--[--><!----><!--]--><nav class="nav-links"><div class="nav-item hide-in-mobile"><a href="/" class="nav-link" aria-label="博客主页"><span class="font-icon icon iconfont icon-home" style=""></span>博客主页<!----></a></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="Css"><span class="title"><span class="font-icon icon iconfont icon-css" style=""></span>Css</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/posts/css/flex.html" class="nav-link" aria-label="flex"><!---->flex<!----></a></li><li class="dropdown-item"><a href="/posts/css/media.html" class="nav-link" aria-label="media"><!---->media<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="JavaScript"><span class="title"><span class="font-icon icon iconfont icon-javascript" style=""></span>JavaScript</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><h4 class="dropdown-subtitle"><span>ES6</span></h4><ul class="dropdown-subitem-wrapper"><li class="dropdown-subitem"><a href="/posts/javascript/es6%E6%96%B0%E5%A2%9Earray.html" class="nav-link" aria-label="Array"><!---->Array<!----></a></li></ul></li><li class="dropdown-item"><a href="/posts/javascript/String%E5%AD%97%E7%AC%A6%E4%B8%B2%E6%96%B9%E6%B3%95.html" class="nav-link" aria-label="String"><!---->String<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><div class="dropdown-wrapper"><button class="dropdown-title" type="button" aria-label="Vue"><span class="title"><span class="font-icon icon iconfont icon-vue" style=""></span>Vue</span><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/posts/vue/vuex.html" class="nav-link" aria-label="vuex"><!---->vuex<!----></a></li><li class="dropdown-item"><a href="/posts/vue/vue-router-beforeach.html" class="nav-link" aria-label="Router"><!---->Router<!----></a></li></ul></button></div></div><div class="nav-item hide-in-mobile"><a href="/intro.html" class="nav-link" aria-label="关于"><span class="font-icon icon iconfont icon-profile" style=""></span>关于<!----></a></div></nav><!--[--><!----><!--]--></div><div class="navbar-right"><!--[--><!----><!--]--><div class="nav-item"><div class="dropdown-wrapper i18n-dropdown"><button class="dropdown-title" type="button" aria-label="选择语言"><!--[--><svg xmlns="http://www.w3.org/2000/svg" class="icon i18n-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="i18n icon" style="width:1rem;height:1rem;vertical-align:middle;"><path d="M379.392 460.8 494.08 575.488l-42.496 102.4L307.2 532.48 138.24 701.44l-71.68-72.704L234.496 460.8l-45.056-45.056c-27.136-27.136-51.2-66.56-66.56-108.544h112.64c7.68 14.336 16.896 27.136 26.112 35.84l45.568 46.08 45.056-45.056C382.976 312.32 409.6 247.808 409.6 204.8H0V102.4h256V0h102.4v102.4h256v102.4H512c0 70.144-37.888 161.28-87.04 210.944L378.88 460.8zM576 870.4 512 1024H409.6l256-614.4H768l256 614.4H921.6l-64-153.6H576zM618.496 768h196.608L716.8 532.48 618.496 768z"></path></svg><!--]--><span class="arrow"></span><ul class="nav-dropdown"><li class="dropdown-item"><a href="/en/" class="nav-link" aria-label="English"><!---->English<!----></a></li><li class="dropdown-item"><a aria-current="page" href="/posts/zx/%E4%BA%8C%E5%8F%89%E6%A0%91-1.html" class="router-link-active router-link-exact-active nav-link active" aria-label="简体中文"><!---->简体中文<!----></a></li></ul></button></div></div><!----><div class="nav-item hide-in-mobile"><button class="outlook-button" tabindex="-1" ariahidden="true"><svg xmlns="http://www.w3.org/2000/svg" class="icon outlook-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="outlook icon"><path d="M224 800c0 9.6 3.2 44.8 6.4 54.4 6.4 48-48 76.8-48 76.8s80 41.6 147.2 0 134.4-134.4 38.4-195.2c-22.4-12.8-41.6-19.2-57.6-19.2C259.2 716.8 227.2 761.6 224 800zM560 675.2l-32 51.2c-51.2 51.2-83.2 32-83.2 32 25.6 67.2 0 112-12.8 128 25.6 6.4 51.2 9.6 80 9.6 54.4 0 102.4-9.6 150.4-32l0 0c3.2 0 3.2-3.2 3.2-3.2 22.4-16 12.8-35.2 6.4-44.8-9.6-12.8-12.8-25.6-12.8-41.6 0-54.4 60.8-99.2 137.6-99.2 6.4 0 12.8 0 22.4 0 12.8 0 38.4 9.6 48-25.6 0-3.2 0-3.2 3.2-6.4 0-3.2 3.2-6.4 3.2-6.4 6.4-16 6.4-16 6.4-19.2 9.6-35.2 16-73.6 16-115.2 0-105.6-41.6-198.4-108.8-268.8C704 396.8 560 675.2 560 675.2zM224 419.2c0-28.8 22.4-51.2 51.2-51.2 28.8 0 51.2 22.4 51.2 51.2 0 28.8-22.4 51.2-51.2 51.2C246.4 470.4 224 448 224 419.2zM320 284.8c0-22.4 19.2-41.6 41.6-41.6 22.4 0 41.6 19.2 41.6 41.6 0 22.4-19.2 41.6-41.6 41.6C339.2 326.4 320 307.2 320 284.8zM457.6 208c0-12.8 12.8-25.6 25.6-25.6 12.8 0 25.6 12.8 25.6 25.6 0 12.8-12.8 25.6-25.6 25.6C470.4 233.6 457.6 220.8 457.6 208zM128 505.6C128 592 153.6 672 201.6 736c28.8-60.8 112-60.8 124.8-60.8-16-51.2 16-99.2 16-99.2l316.8-422.4c-48-19.2-99.2-32-150.4-32C297.6 118.4 128 291.2 128 505.6zM764.8 86.4c-22.4 19.2-390.4 518.4-390.4 518.4-22.4 28.8-12.8 76.8 22.4 99.2l9.6 6.4c35.2 22.4 80 12.8 99.2-25.6 0 0 6.4-12.8 9.6-19.2 54.4-105.6 275.2-524.8 288-553.6 6.4-19.2-3.2-32-19.2-32C777.6 76.8 771.2 80 764.8 86.4z"></path></svg><div class="outlook-dropdown"><!----></div></button></div><!--[--><button class="search-pro-button" role="search" aria-label="搜索"><svg xmlns="http://www.w3.org/2000/svg" class="icon search-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="search icon"><path d="M192 480a256 256 0 1 1 512 0 256 256 0 0 1-512 0m631.776 362.496-143.2-143.168A318.464 318.464 0 0 0 768 480c0-176.736-143.264-320-320-320S128 303.264 128 480s143.264 320 320 320a318.016 318.016 0 0 0 184.16-58.592l146.336 146.368c12.512 12.48 32.768 12.48 45.28 0 12.48-12.512 12.48-32.768 0-45.28"></path></svg></button><!--]--><!--[--><!----><!--]--><button class="toggle-navbar-button" aria-label="Toggle Navbar" aria-expanded="false" aria-controls="nav-screen"><span class="button-container"><span class="button-top"></span><span class="button-middle"></span><span class="button-bottom"></span></span></button></div></header><!----><!--]--><!----><div class="toggle-sidebar-wrapper"><span class="arrow left"></span></div><aside class="sidebar" id="sidebar"><!--[--><!----><!--]--><ul class="sidebar-links"><li><!--[--><a href="/posts/zx/%E5%8F%B3%E9%94%AE%E6%89%93%E5%BC%80%E8%8F%9C%E5%8D%95%E7%9A%84%E6%98%BE%E7%A4%BA.html" class="nav-link sidebar-link sidebar-page" aria-label="把 vs Code 添加到右键菜单 ( 其他程序一样 )"><!---->把 vs Code 添加到右键菜单 ( 其他程序一样 )<!----></a><ul class="sidebar-sub-headers"></ul><!--]--></li><li><!--[--><a aria-current="page" href="/posts/zx/%E4%BA%8C%E5%8F%89%E6%A0%91-1.html" class="router-link-active router-link-exact-active nav-link active sidebar-link sidebar-page active" aria-label="二叉树"><!---->二叉树<!----></a><ul class="sidebar-sub-headers"><li class="sidebar-sub-header"><a aria-current="page" href="/posts/zx/%E4%BA%8C%E5%8F%89%E6%A0%91-1.html#二叉树的概念" class="router-link-active router-link-exact-active nav-link sidebar-link heading" aria-label="二叉树的概念"><!---->二叉树的概念<!----></a><ul class="sidebar-sub-headers"></ul></li></ul><!--]--></li></ul><!--[--><!----><!--]--></aside><!--[--><main class="page" id="main-content"><!--[--><!----><nav class="breadcrumb disable"></nav><div class="page-title"><h1><!---->二叉树</h1><div class="page-info"><span class="page-author-info" aria-label="作者🖊" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon author-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="author icon"><path d="M649.6 633.6c86.4-48 147.2-144 147.2-249.6 0-160-128-288-288-288s-288 128-288 288c0 108.8 57.6 201.6 147.2 249.6-121.6 48-214.4 153.6-240 288-3.2 9.6 0 19.2 6.4 25.6 3.2 9.6 12.8 12.8 22.4 12.8h704c9.6 0 19.2-3.2 25.6-12.8 6.4-6.4 9.6-16 6.4-25.6-25.6-134.4-121.6-240-243.2-288z"></path></svg><span><a class="page-author-item" href="http://cc.ceel.vip" target="_blank" rel="noopener noreferrer">Miss.Ceel</a></span><span property="author" content="Miss.Ceel"></span></span><!----><span class="page-date-info" aria-label="写作日期📅" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon calendar-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="calendar icon"><path d="M716.4 110.137c0-18.753-14.72-33.473-33.472-33.473-18.753 0-33.473 14.72-33.473 33.473v33.473h66.993v-33.473zm-334.87 0c0-18.753-14.72-33.473-33.473-33.473s-33.52 14.72-33.52 33.473v33.473h66.993v-33.473zm468.81 33.52H716.4v100.465c0 18.753-14.72 33.473-33.472 33.473a33.145 33.145 0 01-33.473-33.473V143.657H381.53v100.465c0 18.753-14.72 33.473-33.473 33.473a33.145 33.145 0 01-33.473-33.473V143.657H180.6A134.314 134.314 0 0046.66 277.595v535.756A134.314 134.314 0 00180.6 947.289h669.74a134.36 134.36 0 00133.94-133.938V277.595a134.314 134.314 0 00-133.94-133.938zm33.473 267.877H147.126a33.145 33.145 0 01-33.473-33.473c0-18.752 14.72-33.473 33.473-33.473h736.687c18.752 0 33.472 14.72 33.472 33.473a33.145 33.145 0 01-33.472 33.473z"></path></svg><span><!----></span><meta property="datePublished" content="2017-01-25T17:33:01.000Z"></span><!----><span class="page-reading-time-info" aria-label="阅读时间⌛" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon timer-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="timer icon"><path d="M799.387 122.15c4.402-2.978 7.38-7.897 7.38-13.463v-1.165c0-8.933-7.38-16.312-16.312-16.312H256.33c-8.933 0-16.311 7.38-16.311 16.312v1.165c0 5.825 2.977 10.874 7.637 13.592 4.143 194.44 97.22 354.963 220.201 392.763-122.204 37.542-214.893 196.511-220.2 389.397-4.661 5.049-7.638 11.651-7.638 19.03v5.825h566.49v-5.825c0-7.379-2.849-13.981-7.509-18.9-5.049-193.016-97.867-351.985-220.2-389.527 123.24-37.67 216.446-198.453 220.588-392.892zM531.16 450.445v352.632c117.674 1.553 211.787 40.778 211.787 88.676H304.097c0-48.286 95.149-87.382 213.728-88.676V450.445c-93.077-3.107-167.901-81.297-167.901-177.093 0-8.803 6.99-15.793 15.793-15.793 8.803 0 15.794 6.99 15.794 15.793 0 80.261 63.69 145.635 142.01 145.635s142.011-65.374 142.011-145.635c0-8.803 6.99-15.793 15.794-15.793s15.793 6.99 15.793 15.793c0 95.019-73.789 172.82-165.96 177.093z"></path></svg><span>大约 6 分钟</span><meta property="timeRequired" content="PT6M"></span><span class="page-category-info" aria-label="分类🌈" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon category-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="category icon"><path d="M148.41 106.992h282.176c22.263 0 40.31 18.048 40.31 40.31V429.48c0 22.263-18.047 40.31-40.31 40.31H148.41c-22.263 0-40.311-18.047-40.311-40.31V147.302c0-22.263 18.048-40.31 40.311-40.31zM147.556 553.478H429.73c22.263 0 40.311 18.048 40.311 40.31v282.176c0 22.263-18.048 40.312-40.31 40.312H147.555c-22.263 0-40.311-18.049-40.311-40.312V593.79c0-22.263 18.048-40.311 40.31-40.311zM593.927 106.992h282.176c22.263 0 40.31 18.048 40.31 40.31V429.48c0 22.263-18.047 40.31-40.31 40.31H593.927c-22.263 0-40.311-18.047-40.311-40.31V147.302c0-22.263 18.048-40.31 40.31-40.31zM730.22 920.502H623.926c-40.925 0-74.22-33.388-74.22-74.425V623.992c0-41.038 33.387-74.424 74.425-74.424h222.085c41.038 0 74.424 33.226 74.424 74.067v114.233c0 10.244-8.304 18.548-18.547 18.548s-18.548-8.304-18.548-18.548V623.635c0-20.388-16.746-36.974-37.33-36.974H624.13c-20.585 0-37.331 16.747-37.331 37.33v222.086c0 20.585 16.654 37.331 37.126 37.331H730.22c10.243 0 18.547 8.304 18.547 18.547 0 10.244-8.304 18.547-18.547 18.547z"></path></svg><span class="page-category-item category5 clickable" role="navigation">数据结构</span><meta property="articleSection" content="数据结构"></span><span class="page-tag-info" aria-label="标签🏷" data-balloon-pos="down"><svg xmlns="http://www.w3.org/2000/svg" class="icon tag-icon" viewBox="0 0 1024 1024" fill="currentColor" aria-label="tag icon"><path d="M939.902 458.563L910.17 144.567c-1.507-16.272-14.465-29.13-30.737-30.737L565.438 84.098h-.402c-3.215 0-5.726 1.005-7.634 2.913l-470.39 470.39a10.004 10.004 0 000 14.164l365.423 365.424c1.909 1.908 4.42 2.913 7.132 2.913s5.223-1.005 7.132-2.913l470.39-470.39c2.01-2.11 3.014-5.023 2.813-8.036zm-240.067-72.121c-35.458 0-64.286-28.828-64.286-64.286s28.828-64.285 64.286-64.285 64.286 28.828 64.286 64.285-28.829 64.286-64.286 64.286z"></path></svg><span class="page-tag-item tag5 clickable" role="navigation">数据结构</span><meta property="keywords" content="数据结构"></span></div><hr></div><div class="toc-place-holder"><aside id="toc"><div class="toc-header">此页内容<!----></div><div class="toc-wrapper"><ul class="toc-list"><!--[--><li class="toc-item"><a aria-current="page" href="/posts/zx/%E4%BA%8C%E5%8F%89%E6%A0%91-1.html#二叉树的概念" class="router-link-active router-link-exact-active toc-link level2">二叉树的概念</a></li><!----><!--]--></ul></div></aside></div><!----><div class="theme-hope-content"><!----><!-- more --> ``` 二叉树（Binary Tree）是n（n≥0）个结点的有限集合，该集合或者为空集(称为空二叉树), 或者由一个根结点和两棵互不相交的、分别称为根结点的左子树和右子树的二叉树组成。 <p>二叉树特点： 1.每个结点最多有两棵子树，所以二叉树中不存在度大于2的结点。没有子树或者有一棵子树 是可以的，最多有两棵子树。 2.左子树和右子树是有顺序的，次序不能颠倒。 3.即使树中某结点只有一棵子树，也要区分它是左子树还是右子树。</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>二叉树具有五种基本形态：
+1.空二叉树；2.只有一个根结点；3.根结点只有左子树；4.根结点只有右子树；5.根结点既有左子树又有右子树。
+
+## 特殊二叉树 ##
+### 斜树 ###
+所有的结点都**只有左子树**的二叉树叫 ** 左斜树 **。所有的结点都是**只有右子树**的二叉树叫 **右斜树**。这二者统称为**斜树**。斜树有明显特点，每一层都只有一个结点，结点的个数和二叉树的深度相同。斜树和线性表结构一样，**线性表结构是树的一种特殊表现形式。**
+### 满二叉树 ###
+在一棵二叉树中，如果所有分支结点都存在左子树和右子树，并且**所有叶子都在同一层上**，这样的二叉树称为满二叉树。单是每个节点都存在左右子树，不能算是满n二叉树，还必须要所有的叶子结点都在同一层上，这样就做到了整棵树的平衡。所以，满二叉树的特点是：1.**叶子只能出现在最下一层**，出现在其他层就不能达到平衡；2.**非叶子结点的度一定是2**；3.在同样深度的二叉树中，**满二叉树的结点最多，叶子数最多。**
+### 完全二叉树 ###
+对一棵具有n个结点的二叉树 按层序编号 ，如果编号为i（1≤i≤n）的结点与同样深度的满二叉树中编号为i的结点在二叉树中位置完全相同，则这颗二叉树称为完全二叉树。
+
+**完全二叉树的特性：
+（1）叶子结点只能出现在最下两层。
+（2）最下层的叶子一定集中在左部连续位置。
+（3）倒数第二层，若有叶子结点，一定都在右部连续位置。
+（4）如果结点度为1，则该结点只有左孩子，即不存在只有右子树的情况。
+（5）同样结点数的二叉树，完全二叉树的深度最小。**
+### 二叉树的性质 ###
+性质一：在二叉树的第i层上至多有 2i−1 个结点（i≥1）。—–归纳法
+
+性质二：深度为k的二叉树至多有 2k−1 个结点（k≥1）。—–归纳法
+
+性质三：对任何一棵二叉树T，如果其终端结点数为 n0，度为2的结点数为 n2，则 n0=n2+1。
+</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div><p>设 n1 为度是1的结点数，那么T结点总数 n=n0+n1+n2.换个角度，数数连接连线， 因为根结点只有分支出去，没有分支进入，所以分支线总数为结点总数减去1， 分支线总数为 n−1=n1+2n2 ，两个式子相减得到 n0=n2+1。</p><div class="language-text line-numbers-mode" data-ext="text"><pre class="language-text"><code>性质四：具有n个结点的完全二叉树的深度为 |log2n|+1（其中|x|表示不大于x的最大整数）。
+
+性质五：如果对一棵有n个结点的完全二叉树（深度为 |log2n|+1）的结点按层序编号（从第1层到第 |log2n|+1层，每层从左到右），对任一结点i（1≤i≤n）有：
+1.如果 i=1，则结点i是二叉树的根，无双亲；如果 i&gt;1，则其双亲是结点|i/2|。
+2.如果2i&gt;n，则结点i无左孩子（结点i为叶子结点）；否则其左孩子是结点2i。
+3.如果2i+1&gt;n，则结点i无右孩子；否则其右孩子是结点2i+1。
+
+## 二叉树的存储结构 ##
+### 二叉树顺序存储结构 ###
+
+二叉树比较特殊，所以可以使用顺序存储结构可以实现。二叉树的顺序存储结构就是用一维数组存储二叉树中的结点，并且结点的存储位置，也就是数组的下标要能体现结点之间的逻辑关系，例如双亲与孩子的关系，左右兄弟的关系等等。完全二叉树的存储可以根据**结点的编号**来存储，一般的二叉树，尽管**层序编号**不能反映逻辑关系，但是可按**完全二叉树编号**，将不存在的结点设置为“∧”。若是考虑极端情况，例如右斜树，k个结点，却分配 2k−1 个存储单元空间，浪费了存储空间。所以，**顺序存储结构一般只用于完全二叉树。**
+
+## 二叉树的遍历 ##
+例如:
+
+![你想输入的替代文字](二叉树-1/erchashu.jpg)
+
+** 先序遍历：ABCDEFGHK **
+
+** 中序遍历：BDCAEHGKF **
+
+** 后序遍历：DCBHKGFEA **
+
+以中序遍历为例：
+
+中序遍历的规则是【左根右】，我们从root节点A看起；
+
+此时A是根节点，遍历A的左子树；
+
+A的左子树存在，找到B，此时B看做根节点，遍历B的左子树；
+
+B的左子树不存在，返回B，根据【左根右】的遍历规则，记录B，遍历B的右子树；
+
+B的右子树存在，找到C，此时C看做根节点，遍历C的左子树；
+
+C的左子树存在，找到D，由于D是叶子节点，无左子树，记录D，无右子树，返回C，根据【左根右】的遍历规则，记录C，遍历C的右子树；
+
+C的右子树不存在，返回B，B的右子树遍历完，返回A；
+
+至此，A的左子树遍历完毕，根据【左根右】的遍历规则，记录A，遍历A的右子树；
+
+A的右子树存在，找到E，此时E看做根节点，遍历E的左子树；
+
+E的左子树不存在，返回E，根据【左根右】的遍历规则，记录E，遍历E的右子树；
+
+E的右子树存在，找到F，此时F看做根节点，遍历F的左子树；
+
+F的左子树存在，找到G，此时G看做根节点，遍历G的左子树；
+
+G的左子树存在，找到H，由于H是叶子节点，无左子树，记录H，无右子树，返回G，根据【左根右】的遍历规则，记录G，遍历G的右子树；
+
+G的右子树存在，找到K，由于K是叶子节点，无左子树，记录K，无右子树，返回G，根据【左根右】的遍历规则，记录F，遍历F的右子树；
+
+F的右子树不存在，返回F，E的右子树遍历完毕，返回A；
+
+至此，A的右子树也遍历完毕；
+
+
+最终我们得到上图的中序遍历为BDCAEHGKF，无非是按照遍历规则来的；
+
+根据“中序遍历”的分析，相信先序遍历和后序遍历也可以轻松写出~</code></pre><div class="line-numbers" aria-hidden="true"><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div><div class="line-number"></div></div></div></div><!----><footer class="page-meta"><!----><div class="meta-item git-info"><div class="update-time"><span class="label">上次编辑于: </span><!----></div><div class="contributors"><span class="label">贡献者: </span><!--[--><!--[--><span class="contributor" title="email: zxumei@163.com">misszhangxm</span><!--]--><!--]--></div></div></footer><nav class="page-nav"><a href="/posts/zx/%E5%8F%B3%E9%94%AE%E6%89%93%E5%BC%80%E8%8F%9C%E5%8D%95%E7%9A%84%E6%98%BE%E7%A4%BA.html" class="nav-link prev" aria-label="把 vs Code 添加到右键菜单 ( 其他程序一样 )"><div class="hint"><span class="arrow left"></span>上一页</div><div class="link"><!---->把 vs Code 添加到右键菜单 ( 其他程序一样 )</div></a><!----></nav><div class="giscus-wrapper input-top" style="display:block;"><div style="text-align:center">Loading...</div></div><!----><!--]--></main><!--]--><footer class="footer-wrapper"><div class="footer"></div><div class="copyright">Copyright © 2023 Miss.Ceel</div></footer></div><!--]--><!----><!----><!--]--></div>
+    <script type="module" src="/assets/app-2e9daeed.js" defer></script>
+  </body>
+</html>
