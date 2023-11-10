@@ -17,4 +17,4 @@
 
 
 #### 博客地址
-[mrceel](http://www.cc.ceel.vip/)
+[mrceel](http://ceel.cc)
